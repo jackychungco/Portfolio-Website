@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- The real title is written in by story.js once it knows which story
+     you opened. This one only shows for a split second. -->
+<title>Jacky Chung</title>
+<meta name="description" content="Notes on the work — social, craft, leadership, AI and interiors.">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23d9d8c8'/><text y='.9em' x='.06em' font-size='82' font-family='Helvetica,Arial,sans-serif' font-weight='bold' fill='%23000'>J</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#storyTop">Skip to content</a>
+
+<!-- ============ TOP NAVIGATION ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="index.html">Jacky Chung</a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#reels">Reels</a>
+      <a href="index.html#interiors">Interiors</a>
+      <a href="index.html#stories">Stories</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="storyTop">
+  <!-- Everything below is written in by story.js, based on the ?id= in the
+       address bar. Nothing here needs editing by hand. -->
+  <article class="story" id="story"></article>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+
+    <div class="footer__inner">
+      <span data-site="footerLeft"></span>
+      <span data-site="footerRight"></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox, so photographs inside a story open full screen too -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__close" id="lbClose" aria-label="Close">&times;</button>
+  <div class="lightbox__stage" id="lbStage"></div>
+  <p class="lightbox__caption" id="lbCaption"></p>
+</div>
+
+<script src="content.js"></script>
+<script src="stories.js"></script>
+<script src="story.js"></script>
+<script src="reveal.js"></script>
+
+</body>
+</html>

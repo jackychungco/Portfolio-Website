@@ -1,0 +1,419 @@
+/* ============================================================================
+   THEME.CSS  —  THIS IS YOUR CONTROL PANEL
+   ============================================================================
+
+   EVERYTHING you can customise lives in this ONE file:
+   fonts, colours, background colours, title sizes, font sizes, spacing.
+
+   HOW TO EDIT:
+     1. Find the line you want to change.
+     2. Change ONLY the value between the ":" and the ";"
+     3. Save the file (Cmd + S)
+     4. Go to your browser and press Cmd + R to reload. Change is instant.
+
+   THE THREE RULES:
+     - NEVER delete the ";" at the end of a line.
+     - NEVER delete the "--" at the start of a name.
+     - If you break something, the page goes plain/ugly but is not destroyed.
+       Undo with Cmd + Z, save again, reload.
+
+   HOW COLOURS WORK:
+     A colour looks like  #F6F4F0  — a "#" then 6 characters.
+     Get any colour code from https://coolors.co or Google "color picker".
+     Some ready ones:
+       White        #FFFFFF        Near black   #17150F
+       Warm cream   #F6F4F0        Charcoal     #2B2926
+       Cool grey    #F2F2F4        Terracotta   #9A3F1F
+       Sand         #EAE3D8        Deep green   #2F4739
+       Pure black   #000000        Navy         #1B2A41
+
+   HOW SIZES WORK:
+     A size looks like  88px  — a number then "px" (pixels).
+     Bigger number = bigger. 16px is normal reading text.
+     Always keep the "px". Never write "88 px" with a space.
+   ============================================================================ */
+
+
+/* ============================================================================
+   YOUR OWN FONT FILES
+   ----------------------------------------------------------------------------
+   The site looks for Akzidenz-Grotesk in a folder called "fonts" next to
+   index.html. Put these two files in there, named EXACTLY like this:
+
+       fonts/akzidenz-grotesk-regular.woff2
+       fonts/akzidenz-grotesk-bold.woff2
+
+   If the files aren't there, nothing breaks. The browser quietly falls back
+   to Helvetica Neue, which is Akzidenz-Grotesk's direct descendant and the
+   closest thing every Mac already has.
+   ============================================================================ */
+
+@font-face {
+  font-family: 'Akzidenz-Grotesk Web';
+  src: url('fonts/akzidenz-grotesk-regular.woff2') format('woff2'),
+       url('fonts/akzidenz-grotesk-regular.woff') format('woff');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Akzidenz-Grotesk Web';
+  src: url('fonts/akzidenz-grotesk-bold.woff2') format('woff2'),
+       url('fonts/akzidenz-grotesk-bold.woff') format('woff');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+
+:root {
+
+  /* ==========================================================================
+     1. FONTS
+     --------------------------------------------------------------------------
+     The whole site is now one family: Akzidenz-Grotesk. Headings are the
+     BOLD weight, everything else is the REGULAR weight. That is set in
+     section 4 below, not here.
+
+     Both lines below are the same list on purpose. Don't shorten them:
+     each name is a fallback for the one before it, so the site still looks
+     right on a machine that doesn't have your font.
+
+     TO SWAP TO A DIFFERENT FONT ENTIRELY:
+       STEP 1 — open index.html, find the big FONTS comment near the top,
+                and swap the Google Fonts <link> line for your new font's line
+                (get it at https://fonts.google.com -> Get font -> Get embed code)
+       STEP 2 — write the new font's exact name FIRST in the lists below.
+     ========================================================================== */
+
+  /* The font for BIG HEADINGS: your name, section titles, project titles.
+     The list is tried left to right. 'Akzidenz-Grotesk Web' is your own
+     font files; the rest are the safety net if they aren't there yet. */
+  --font-display: 'Akzidenz-Grotesk Web', 'Akzidenz-Grotesk Pro', 'Akzidenz-Grotesk',
+                  'Helvetica Neue', 'Inter', Helvetica, Arial, sans-serif;
+
+  /* The font for EVERYTHING ELSE: paragraphs, menu, captions, small labels.
+     Same family, just not bold. */
+  --font-body: 'Akzidenz-Grotesk Web', 'Akzidenz-Grotesk Pro', 'Akzidenz-Grotesk',
+               'Helvetica Neue', 'Inter', Helvetica, Arial, sans-serif;
+
+
+  /* ==========================================================================
+     2. COLOURS
+     ========================================================================== */
+
+  /* THE BACKGROUND COLOUR OF THE WHOLE SITE */
+  --color-background: #ffeecc;
+
+  /* Background of cards, the sticky menu bar, and photo tiles */
+  --color-surface: #e4e3d4;
+
+  /* MAIN TEXT COLOUR (headings and paragraphs) */
+  --color-text: #000000;
+
+  /* Quieter text: captions, years, client names, small labels */
+  --color-text-muted: #000000;
+
+  /* Very quiet text: the "01 / 02 / 03" section numbers */
+  --color-text-faint: #6b6a56;
+
+  /* Thin dividing lines between sections */
+  --color-line: #b7b6a1;
+
+  /* THE SECOND BACKGROUND COLOUR - the olive block used by the footer.
+     Reuse it anywhere you want a solid panel. */
+  --color-background-alt: #8f874d;
+
+  /* THE ACCENT COLOUR — link hovers, underlines, the highlight */
+  --color-accent: #9A3F1F;
+
+  /* Background of the sticky menu bar at the very top.
+     "transparent" lets the page colour show through. */
+  --color-nav-background: #ffeecc;
+
+  /* THE FOOTER at the very bottom */
+  --color-footer-background: #ffeecc;
+  --color-footer-text: #000000;
+
+  /* The dark screen behind a photo or video when you click it open */
+  --color-lightbox-backdrop: rgba(15, 14, 11, 0.94);
+
+  /* Colour of the empty placeholder tiles (before you add real photos) */
+  --color-placeholder: #c6c5b0;
+
+
+  /* ==========================================================================
+     3. TEXT SIZES  (desktop)
+     --------------------------------------------------------------------------
+     Phone sizes are set separately at the BOTTOM of this file.
+     ========================================================================== */
+
+  /* THE HUGE TITLE on the homepage */
+  /* Three numbers: the smallest the headline may get, how fast it grows with
+     the window, and the biggest it may get. Change the LAST number to make
+     the headline bigger or smaller on a normal screen. Above about 73px the
+     four lines stop fitting and the browser starts breaking them itself. */
+  --size-hero-title: clamp(46px, 5.2vw, 70px);
+
+  /* The paragraph right under the huge title */
+  --size-hero-lede: 22px;
+
+  /* SECTION TITLES: "Selected Work", "Interiors", "About", "Contact" */
+  --size-section-title: 44px;
+
+  /* The title of each video / project card */
+  --size-card-title: 26px;
+
+  /* Normal paragraph text everywhere */
+  --size-body: 17px;
+
+  /* Small text: client names, years, roles, captions, footer */
+  --size-small: 13px;
+
+  /* The menu links at the top */
+  --size-nav: 14px;
+
+  /* The giant clickable email address in the Contact section */
+  --size-contact-email: 40px;
+
+
+  /* ==========================================================================
+     4. FONT WEIGHT (thin vs bold)
+     --------------------------------------------------------------------------
+     300 = light   400 = normal   500 = medium   600 = semibold   700 = bold
+     Only works if the font you chose actually has that weight.
+     ========================================================================== */
+
+  --weight-hero-title: 700;
+  --weight-section-title: 700;
+  --weight-card-title: 700;
+  --weight-body: 400;
+  --weight-nav: 500;
+
+
+  /* ==========================================================================
+     5. LETTER SPACING AND LINE HEIGHT
+     --------------------------------------------------------------------------
+     Letter spacing: negative squeezes letters together, positive pushes apart.
+       -0.03em is tight and modern.  0.12em is wide and luxury-brand.
+     Line height: the gap between lines. 1.0 = cramped, 1.7 = airy.
+     ========================================================================== */
+
+  /* VINTAGE PRINT TREATMENT.
+     uppercase = old poster / film-slate look on every big title.
+     none      = normal sentence case, like it was before. */
+  --case-titles: uppercase;
+
+  /* THE BIG HEADLINE ON THE FRONT PAGE, on its own.
+     "none"      = it appears exactly as you typed it in content.js, so you
+                   decide which letters are capital.
+     "uppercase" = forced to capitals however you type it.
+     "capitalize"= Every Word Gets A Capital Letter. */
+  --case-hero-title: none;
+
+  /* Letter spacing. Capitals need MORE space than lower case, which is why
+     these are positive numbers now. 0.10em would be very wide and formal. */
+  --tracking-hero-title: -0.035em;
+  --tracking-section-title: -0.025em;
+  --tracking-card-title: -0.015em;
+  --tracking-label: 0.14em;      /* the tiny UPPERCASE labels */
+
+  /* The gap between the lines of the big headline, as a multiple of the type
+     size. SMALLER = tighter. Below about 0.80 the descenders of one line
+     start hitting the letters of the next. */
+  --leading-hero-title: 0.78;
+  --leading-heading: 0.98;
+  --leading-body: 1.36;
+
+  /* THE HEADLINE, LINE BY LINE.
+     --leading-hero-title above sets EVERY gap in the headline to the same
+     amount. These five dials then nudge ONE gap at a time, so the spacing
+     can be different between every pair of lines.
+
+     --hero-line-gap-1 is the gap between line 1 and line 2,
+     --hero-line-gap-2 is between line 2 and line 3, and so on.
+
+     The numbers are in "em", which means a share of the letter height, so
+     the spacing stays right whether the headline is big on a monitor or
+     small on a phone. 0.1em is roughly a tenth of a capital letter.
+
+     0em          leave that gap exactly as it is
+     -0.1em       pull those two lines CLOSER together
+     0.1em        push those two lines FURTHER apart
+
+     You decide where the lines break by typing \n in heroTitle in
+     content.js. Line 1 is everything before the first \n. */
+  --hero-line-gap-1: -0.15em;
+  --hero-line-gap-2: 0em;
+  --hero-line-gap-3: 0.00001em;
+  --hero-line-gap-4: 0em;
+  --hero-line-gap-5: 0em;
+
+
+  /* ==========================================================================
+     6. LAYOUT AND SPACING
+     ========================================================================== */
+
+  /* How wide the content is allowed to get on a big monitor */
+  --page-max-width: 1280px;
+
+  /* Space left and right of the content */
+  --page-padding: 48px;
+
+  /* HOW WIDE THE HERO PHOTO IS, sitting next to the headline.
+     Your photos are tall (portrait), so a narrow column suits them.
+     Try 32% for smaller, 46% for larger. On phones it goes full width. */
+  --hero-image-width: 42%;
+
+  /* THE GAP BETWEEN THE SHOWREEL AND THE WRITING beside it.
+     Smaller pulls the words in closer to the picture. Try 24px for tight,
+     72px for airy. */
+  --hero-gap: 36px;
+
+  /* Vertical space between the big sections */
+  --section-gap: 140px;
+
+  /* Corner rounding. 0px = sharp editorial corners. 12px = soft. */
+  --radius: 2px;
+
+  /* HOW MANY VIDEOS SIT SIDE BY SIDE (desktop). Try 1, 2 or 3. */
+  --work-columns: 2;
+
+  /* HOW MANY PHOTOS SIT SIDE BY SIDE in the Interiors gallery. Try 2, 3 or 4. */
+  --gallery-columns: 3;
+
+  /* ---- THE SOCIAL REELS LAYOUT --------------------------------------------
+     The eight reels sit in vertical "tracks" that each start at a slightly
+     different height, so the page looks composed instead of like a grid. */
+
+  /* HOW MANY TRACKS OF REELS. 3 is the design. Try 2 for bigger thumbnails,
+     4 for smaller ones. Reels fill the tracks left to right, top to bottom. */
+  --reels-tracks: 3;
+
+  /* Side-to-side gap between the tracks. */
+  --reels-track-gap: 40px;
+
+  /* Top-to-bottom gap between reels inside one track.
+     SMALLER = more packed. Try 28px for very tight, 70px for airy. */
+  --reels-item-gap: 44px;
+
+  /* HOW FAR EACH TRACK DROPS BELOW THE ONE BEFORE IT. This is what stops the
+     reels lining up in rows. 0px turns the stagger off completely. */
+  --reels-stagger: 70px;
+
+  /* The three thumbnail widths, as a share of their track. Varying these is
+     what makes it look scattered. Set all three to 100% for equal tiles. */
+  --reel-size-lg: 100%;
+  --reel-size-md: 79%;
+  --reel-size-sm: 63%;
+
+  /* Corner rounding on reel thumbnails only. 0px = sharp, 12px = soft. */
+  --reels-radius: 12px;
+
+  /* HOW WIDE THE BIG SHOWREEL THUMBNAIL IS. The description sits beside it.
+     Try 30% for a smaller showreel, 45% for a more dominant one. */
+  --showreel-width: 32%;
+
+  /* THE SHAPE OF THE SHOWREEL THUMBNAIL at the top of the page.
+     This is the picture only — the video itself still plays in its own
+     shape when someone clicks it. Squarer thumbnails sit better beside a
+     big headline; a tall one pushes the page down.
+     Try "9 / 16" (tall), "3 / 4", "4 / 5", or "1 / 1" (square). */
+  --showreel-ratio: 3 / 4;
+
+  /* THE LITTLE LABEL ABOVE EACH REEL (01  SEPHORA - BEAUTY PASS  SOCIAL).
+     This uses your normal font. If you ever want the typewriter look that
+     Mikki's site has, delete the line below and un-comment the one under it. */
+  --font-label: var(--font-display);
+  /* --font-label: 'Courier New', Courier, monospace; */
+
+  /* The gap between grid items (videos, and the reel tracks) */
+  --grid-gap: 40px;
+
+  /* YOUR ABOUT PHOTO. It sits at the top left and the paragraphs wrap
+     around it. This is how wide it is, as a share of the text column.
+     SMALLER number = smaller photo and more words beside it.
+     Try 24% for small, 32% for medium, 40% for large.
+     On a phone the photo un-wraps and goes full width above the text. */
+  --about-photo-width: 34%;
+
+  /* The space between that photo and the text wrapping around it. */
+  --about-photo-gap: 28px;
+
+  /* THE GAP BETWEEN THE INTERIOR PHOTOS. Smaller = tighter, more like a
+     contact sheet. Try 8px for very tight, 40px for airy. */
+  --gallery-gap: 16px;
+
+  /* How fast hover effects move. 0.2s is snappy, 0.6s is slow and luxurious. */
+  --speed: 0.35s;
+
+  /* ---- THE SCROLL FADE ------------------------------------------------------
+     As you scroll, each heading, paragraph, photograph and reel fades in and
+     rises slightly into place instead of just being there. */
+
+  /* HOW FAR things slide up while fading in.
+     0px = a pure fade with no movement. 40px = a bigger, slower-feeling lift. */
+  --reveal-distance: 22px;
+
+  /* HOW LONG the fade takes. 0.4s is brisk, 1.2s is dreamy.
+     SET THIS TO 0s TO TURN THE WHOLE EFFECT OFF. */
+  --reveal-speed: 0.75s;
+
+  /* THE DELAY BETWEEN ONE ITEM AND THE NEXT, so a row of reels arrives one
+     after another rather than all at once. 0s = everything together. */
+  --reveal-stagger: 0.08s;
+
+  /* HOW FAR UP THE SCREEN something has to be before it starts fading in.
+     12% means it waits until it is a little way past the bottom edge.
+     Use 0% to have things appear the moment they touch the bottom of the
+     screen, or 25% to make people scroll further before anything happens. */
+  --reveal-start: 12%;
+}
+
+
+/* ============================================================================
+   7. PHONE AND TABLET SIZES
+   ----------------------------------------------------------------------------
+   Anything you write inside these curly brackets ONLY applies on small screens.
+   The values above still apply on laptops and desktops.
+   ============================================================================ */
+
+/* --- TABLET (screen narrower than 900 pixels) --- */
+@media (max-width: 900px) {
+  :root {
+    --size-hero-title: 46px;
+    --size-section-title: 32px;
+    --size-contact-email: 30px;
+    --page-padding: 28px;
+    --section-gap: 96px;
+    --work-columns: 1;
+    --gallery-columns: 2;
+    --reels-tracks: 2;
+    --reels-stagger: 40px;
+    --grid-gap: 28px;
+    --gallery-gap: 12px;
+  }
+}
+
+/* --- PHONE (screen narrower than 560 pixels) --- */
+@media (max-width: 560px) {
+  :root {
+    --size-hero-title: 33px;
+    --size-hero-lede: 18px;
+    --size-section-title: 28px;
+    --size-card-title: 20px;
+    --size-body: 16px;
+    --size-contact-email: 22px;
+    --page-padding: 20px;
+    --section-gap: 76px;
+    --gallery-columns: 1;
+    --reels-tracks: 1;
+    --reels-stagger: 0px;
+    --grid-gap: 20px;
+    --gallery-gap: 10px;
+  }
+}
+
+
+/* ============================================================================
+   8. YOUR OWN EXTRA RULES
+   ----------------------------------------------------------------------------
+   Anything you or Claude add later goes below this line, so it never gets
+   mixed up with the settings above.
+   ============================================================================ */

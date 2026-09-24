@@ -1,0 +1,16 @@
+PUT YOUR INTERIOR PHOTOS IN THIS FOLDER.
+
+1. Drag your photos in here.
+2. Rename each one: lowercase, no spaces, use dashes.
+      GOOD -> living-room-01.jpg
+      BAD  -> Living Room (1).JPG
+3. Open content.js (one level up) and list the filenames in the
+   INTERIORS section at the bottom.
+
+The interior-01.jpg ... interior-06.jpg files in here right now are
+grey PLACEHOLDERS so the page isn't empty. Delete them once your real
+photos are in.
+
+SIZE: keep each photo under about 2 MB, longest edge around 2000 pixels.
+Anything bigger just makes the site slow to load. On a Mac you can
+resize by opening the photo in Preview, then Tools > Adjust Size.

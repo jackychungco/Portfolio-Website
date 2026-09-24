@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ==========================================================
+     PAGE TITLE - this is what shows in the browser tab
+     ========================================================== -->
+<title>Jacky Chung — Videographer & Camera Department Head</title>
+
+<meta name="description" content="Selected video work and interior photography by Jacky Chung, videographer and camera department head based in Petaling Jaya, Malaysia.">
+
+<!-- Link preview (when you paste your website link into WhatsApp / Instagram) -->
+<meta property="og:title" content="Jacky Chung — Videographer & Camera Department Head">
+<meta property="og:description" content="Selected video work and interior photography.">
+<meta property="og:type" content="website">
+<!-- To get a preview picture: put a photo named og.jpg inside the images folder -->
+<meta property="og:image" content="images/og.jpg">
+
+<!-- Little icon in the browser tab -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23F6F4F0'/><text y='.9em' x='.12em' font-size='78' font-family='Georgia,serif' fill='%2317150F'>J</text></svg>">
+
+
+<!-- ==========================================================
+     THE FONTS
+     ----------------------------------------------------------
+     These two lines download the fonts from Google.
+     TO CHANGE FONT: go to https://fonts.google.com, pick a font,
+     click "Get font" -> "Get embed code", copy the <link> line
+     they give you, and PASTE IT OVER the last link line below.
+     Then open theme.css and change --font-display / --font-body
+     to the new font's name.
+     ========================================================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+<!-- ==========================================================
+     THE STYLESHEETS
+     theme.css  = YOUR settings (colours, fonts, sizes). EDIT THIS.
+     styles.css = the layout engine. Don't edit unless you want to.
+     ORDER MATTERS: theme.css must come first.
+     ========================================================== -->
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#work">Skip to content</a>
+
+<!-- ============ TOP NAVIGATION ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top" data-site="name">Jacky Chung</a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#reels">Reels</a>
+      <a href="#interiors">Interiors</a>
+      <a href="#stories">Stories</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero__grid" id="heroGrid">
+        <!-- YOUR SHOWREEL sits beside the headline. It is written in by
+             site.js from the SHOWREEL block in content.js. Clicking it opens
+             the player in a pop-up, same as the reels below. -->
+        <div class="hero__reel" id="heroReel" hidden></div>
+
+        <!-- A plain photo can go here instead: set heroImage in content.js
+             and empty the SHOWREEL thumb + url. -->
+        <figure class="hero__image" id="heroImage" hidden></figure>
+
+        <div class="hero__text">
+          <h1 class="hero__title" data-site="heroTitle">Light, motion, and the rooms in between.</h1>
+          <p class="hero__lede" data-site="heroText"></p>
+        </div>
+      </div>
+
+      <div class="hero__meta">
+        <div class="hero__metaItem">
+          <span class="hero__metaLabel">Currently</span>
+          <span class="hero__metaValue" data-site="role"></span>
+        </div>
+        <div class="hero__metaItem">
+          <span class="hero__metaLabel">Based in</span>
+          <span class="hero__metaValue" data-site="location"></span>
+        </div>
+        <div class="hero__metaItem">
+          <span class="hero__metaLabel">Get in touch</span>
+          <a class="hero__metaValue hero__metaLink" data-site="emailLink" href="#contact"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ SELECTED WORK (VIDEOS) ============ -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="sectionHead">
+        <h2 class="sectionHead__title">Selected Work</h2>
+        <span class="sectionHead__note">Film &amp; social</span>
+      </div>
+      <div class="workGrid" id="workGrid"></div>
+    </div>
+  </section>
+
+
+  <!-- ============ SOCIAL REELS ============
+       Clicking a thumbnail opens the video in a pop-up ON THIS PAGE.
+       Everything inside is written in by site.js from content.js —
+       there is nothing to edit by hand here. -->
+  <section class="section" id="reels">
+    <div class="wrap">
+      <div class="sectionHead">
+        <h2 class="sectionHead__title">Social Reels</h2>
+        <span class="sectionHead__note">Click to play</span>
+      </div>
+      <p class="section__lede" data-site="reelsText"></p>
+      <div class="reelsLayout" id="reelsLayout">
+        <div class="reelsTracks" id="reelsTracks"></div>
+      </div>
+      <a class="sectionMore" href="story.html?id=three-reels">Read the story behind these &#8594;</a>
+    </div>
+  </section>
+
+
+  <!-- ============ INTERIORS (PHOTOS) ============ -->
+  <section class="section" id="interiors">
+    <div class="wrap">
+      <div class="sectionHead">
+        <h2 class="sectionHead__title">Interiors</h2>
+      </div>
+      <p class="section__lede" data-site="interiorsText"></p>
+      <div class="gallery" id="gallery"></div>
+      <a class="sectionMore" href="story.html?id=interiors">The full story of the apartment &#8594;</a>
+    </div>
+  </section>
+
+
+  <!-- ============ STORIES (each one opens its own page) ============ -->
+  <section class="section" id="stories">
+    <div class="wrap">
+      <div class="sectionHead">
+        <h2 class="sectionHead__title">Stories</h2>
+        <span class="sectionHead__note">Behind the work</span>
+      </div>
+      <p class="section__lede" data-site="storiesText"></p>
+      <div class="storyList" id="storyList"></div>
+    </div>
+  </section>
+
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section section--about" id="about">
+    <div class="wrap">
+      <div class="sectionHead">
+        <h2 class="sectionHead__title">About</h2>
+      </div>
+      <p class="section__lede" data-site="aboutText"></p>
+      <div class="about">
+        <div class="about__photo" id="aboutPhoto" hidden></div>
+        <div class="about__text" id="aboutText"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section--contact" id="contact">
+    <div class="wrap">
+      <div class="sectionHead">
+        <h2 class="sectionHead__title">Contact</h2>
+      </div>
+      <p class="contact__lede" data-site="contactText"></p>
+      <a class="contact__email" data-site="emailLink" href="#"></a>
+      <div class="contact__links" id="contactLinks"></div>
+    </div>
+  </section>
+
+</main>
+
+
+<footer class="footer">
+  <div class="wrap">
+
+    <div class="footer__inner">
+      <span data-site="footerLeft"></span>
+      <span data-site="footerRight"></span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ============ LIGHTBOX (opens when you click a video or photo) ============ -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__close" id="lbClose" aria-label="Close">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Previous">&#8249;</button>
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Next">&#8250;</button>
+  <div class="lightbox__stage" id="lbStage"></div>
+  <p class="lightbox__caption" id="lbCaption"></p>
+</div>
+
+
+<!-- ==========================================================
+     THE CONTENT AND THE ENGINE
+     content.js = YOUR videos, photos and words. EDIT THIS.
+     site.js    = the engine that puts them on the page.
+     ORDER MATTERS: content.js must come first.
+     ========================================================== -->
+<script src="content.js"></script>
+<script src="stories.js"></script>
+<script src="site.js"></script>
+<script src="reveal.js"></script>
+
+</body>
+</html>

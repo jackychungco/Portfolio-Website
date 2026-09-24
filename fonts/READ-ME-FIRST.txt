@@ -1,0 +1,20 @@
+PUT YOUR AKZIDENZ-GROTESK WEB FONT FILES IN THIS FOLDER.
+
+The site looks for exactly these names (lowercase, dashes, no spaces):
+
+    akzidenz-grotesk-regular.woff2      <- the normal weight
+    akzidenz-grotesk-bold.woff2         <- the bold weight
+
+Optionally also drop in .woff versions with the same names, as a backup
+for very old browsers. Nothing else is needed.
+
+IF THESE FILES ARE NOT HERE, NOTHING BREAKS. The site quietly falls back
+to Helvetica Neue, which is the font Akzidenz-Grotesk directly led to and
+which every Mac already has.
+
+WHAT FORMAT DO I NEED?
+    .woff2 is the web format. If what you have is .otf or .ttf (the format
+    for InDesign and Photoshop), those are DESKTOP files. They will work in
+    a browser but they are 3-5x larger and, more importantly, a desktop
+    licence usually does not permit putting the font on a public website.
+    Check your licence, or ask Claude and it will convert the files for you.

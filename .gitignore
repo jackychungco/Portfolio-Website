@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+
+# Full-size photo backups. Kept on your Mac, never uploaded.
+images/originals/
+
+
+# Big folders that live on the Mac only.
+# Never uploaded. Never deleted. Nothing here is part of the website.
+Social Reels to be Uploaded/
+My Own Pics/
+_backups/
+LinkedIn-Thumbnail/
+Portfolio Website Thumbnail/
