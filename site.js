@@ -64,7 +64,9 @@
     });
   });
 
-  if (site.name) document.title = site.name + (site.role ? " — " + site.role : "");
+  /* The browser-tab title lives in index.html, on the <title> line near the
+     top. It used to be rebuilt here from name + role, which showed a
+     different title in the tab from the one Google and LinkedIn read. */
 
   $$('[data-site="emailLink"]').forEach(function (el) {
     el.textContent = site.email || "";

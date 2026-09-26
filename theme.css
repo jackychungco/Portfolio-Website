@@ -269,6 +269,12 @@
   /* Vertical space between the big sections */
   --section-gap: 140px;
 
+  /* WHERE A MENU CLICK LANDS. When someone clicks Reels, Interiors,
+     Stories or About in the menu bar, that section's big heading stops
+     this far below the menu bar. SMALLER = heading closer to the bar.
+     Try 16px for tight, 32px for comfortable, 64px for airy. */
+  --jump-gap: 32px;
+
   /* Corner rounding. 0px = sharp editorial corners. 12px = soft. */
   --radius: 2px;
 

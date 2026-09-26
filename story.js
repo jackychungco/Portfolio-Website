@@ -47,7 +47,7 @@
     return;
   }
 
-  document.title = story.title + (site.name ? " — " + site.name : "");
+  document.title = story.title + (site.name ? ", " + site.name : "");
   var descTag = document.querySelector('meta[name="description"]');
   if (descTag && story.standfirst) descTag.setAttribute("content", story.standfirst);
 

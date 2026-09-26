@@ -190,7 +190,7 @@ a { color: inherit; text-decoration: none; }
 
 
 /* ============ SECTIONS ============ */
-.section { padding-top: var(--section-gap); scroll-margin-top: 90px; }
+.section { padding-top: var(--section-gap); }
 
 .sectionHead {
   display: flex; align-items: baseline; gap: 22px;
@@ -662,10 +662,20 @@ a { color: inherit; text-decoration: none; }
   font-size: var(--size-small);
 }
 
-/* A jump link (#reels, #interiors...) would otherwise put the section's top
-   edge underneath the sticky menu bar. This holds it clear. */
-section[id], main[id] { scroll-margin-top: 96px; }
-@media (max-width: 560px) { section[id], main[id] { scroll-margin-top: 74px; } }
+/* WHERE A MENU CLICK LANDS.
+   Clicking Reels, Interiors, Stories or About scrolls until the section's
+   top edge reaches this offset. Every section opens with --section-gap of
+   empty space before its heading, so that is subtracted and the menu bar's
+   height added back. The HEADING then lands exactly --jump-gap below the
+   menu bar, at every screen size. To change the gap, edit --jump-gap in
+   theme.css, not the numbers here. */
+:root { --nav-height: 59px; }
+@media (max-width: 560px) { :root { --nav-height: 79px; } }
+.section[id] {
+  scroll-margin-top: calc(var(--nav-height) + var(--jump-gap, 32px) - var(--section-gap));
+}
+main[id] { scroll-margin-top: 96px; }
+@media (max-width: 560px) { main[id] { scroll-margin-top: 74px; } }
 
 
 /* ============ LIGHTBOX ============ */
