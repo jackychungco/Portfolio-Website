@@ -48,7 +48,7 @@ const STORIES = [
   blocks: [
     { type: "heading", text: "My 5-9 after my 9-5 in 2117" },
     { type: "video",
-      thumb:   "Reels-Thumbnail/My-5-9-After-My-9-5.png",
+      thumb:   "Reels-Thumbnail/My-5-9-After-My-9-5.jpg",
       url:     "https://youtube.com/shorts/WRFKL2MlCJY",
       title:   "",
       ratio:   "941:1672",
@@ -61,7 +61,7 @@ const STORIES = [
 
     { type: "heading", text: "Chuck’s Patisserie: The Nara Smith Parody" },
     { type: "video",
-      thumb:   "Reels-Thumbnail/Chuck's-Patisserie-The-Nara-Smith-Parody.png",
+      thumb:   "Reels-Thumbnail/Chucks-Patisserie-The-Nara-Smith-Parody.jpg",
       url:     "https://youtube.com/shorts/c33ztP7TL3Y",
       title:   "",
       ratio:   "941:1672",
@@ -74,7 +74,7 @@ const STORIES = [
 
     { type: "heading", text: "Prepping 2117 Commercial Pro Package" },
     { type: "video",
-      thumb:   "Reels-Thumbnail/Commercial-Pro-Package-Prep.png",
+      thumb:   "Reels-Thumbnail/Commercial-Pro-Package-Prep.jpg",
       url:     "https://youtube.com/shorts/JEpXmuOkAZ8",
       title:   "",
       ratio:   "1122:1402",
@@ -87,7 +87,7 @@ const STORIES = [
 
     { type: "heading", text: "Easy Exposure Hack with the Sony Burano" },
     { type: "video",
-      thumb:   "Reels-Thumbnail/Burano-Exposure-Hack.png",
+      thumb:   "Reels-Thumbnail/Burano-Exposure-Hack.jpg",
       url:     "https://youtube.com/shorts/ZugGH-qo-d8",
       title:   "",
       ratio:   "1080:1920",
@@ -113,7 +113,7 @@ const STORIES = [
 
     { type: "heading", text: "2117’s New Camera Sensor and Lens Cleaning Service" },
     { type: "video",
-      thumb:   "Reels-Thumbnail/2117-Camera-Spa-Service.png",
+      thumb:   "Reels-Thumbnail/2117-Camera-Spa-Service.jpg",
       url:     "https://youtube.com/shorts/P1k6Xw-UbD8",
       title:   "",
       ratio:   "1122:1402",
@@ -126,7 +126,7 @@ const STORIES = [
 
     { type: "heading", text: "2117 T-Shirt Restocked Announcement" },
     { type: "video",
-      thumb:   "Reels-Thumbnail/2117-Tee-Restocked.png",
+      thumb:   "Reels-Thumbnail/2117-Tee-Restocked.jpg",
       url:     "https://youtube.com/shorts/PNrNW_UbCI0",
       title:   "",
       ratio:   "1080:1920",
@@ -310,7 +310,7 @@ const STORIES = [
     ] },
 
     { type: "video",
-      thumb:   "Reels-Thumbnail/Cirello-Car.png",
+      thumb:   "Reels-Thumbnail/Cirello-Car.jpg",
       url:     "https://youtube.com/shorts/XV7gd18uofo",
       title:   "",
       ratio:   "1080:1920",

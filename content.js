@@ -325,7 +325,7 @@ const SHOWREEL = {
   title:   "Showreel",
   caption: "Three years of brand films, social campaigns and rental-house work cut down to ninety seconds. Shot across Klang Valley on everything from an FX3 to an Alexa Mini.",
   meta:    "",
-  thumb:   "Reels-Thumbnail/Jacky-Chung-Showreel-Thumbnail_1.96.1.png",   /* tall 9:16, 1080 x 1920 — or "" to borrow theirs */
+  thumb:   "Reels-Thumbnail/Jacky-Chung-Showreel-Thumbnail_1.96.1.jpg",   /* tall 9:16, 1080 x 1920 — or "" to borrow theirs */
 
   /* A SHORT SILENT CLIP that plays by itself at the top of the page, on a
      loop, with no sound. Think of it as a moving thumbnail, not a deliverable.
@@ -352,7 +352,7 @@ const REELS = [
     tag:      "",
     duration: "",
     text:     "Shot & Lit",
-    thumb:    "Reels-Thumbnail/Chuck's-Better-Body-Jane.png",
+    thumb:    "Reels-Thumbnail/Chucks-Better-Body-Jane.jpg",
     url:      "https://youtube.com/shorts/rlyRScwc71Y",
   },
 
@@ -363,7 +363,7 @@ const REELS = [
     duration: "",
     ratio:    "",
     text:     "Shot & Lit",
-    thumb:    "Reels-Thumbnail/Sephora-Beauty-Products.png",
+    thumb:    "Reels-Thumbnail/Sephora-Beauty-Products.jpg",
     url:      "https://youtube.com/shorts/xRrIcLzQW4Y",
   },
 
@@ -373,7 +373,7 @@ const REELS = [
     duration: "",
     ratio:    "",
     text:     "Shot & Lit",
-    thumb:    "Reels-Thumbnail/Chucks-Prime-Time_2.png",
+    thumb:    "Reels-Thumbnail/Chucks-Prime-Time_2.jpg",
     url:      "https://youtube.com/shorts/NRFSFVGjn-0",
   },
 
@@ -383,7 +383,7 @@ const REELS = [
     duration: "",
     ratio:    "",
     text:     "Shot & Lit",
-    thumb:    "Reels-Thumbnail/Chuck's-Better-Body-Nia-Atasha.png",
+    thumb:    "Reels-Thumbnail/Chucks-Better-Body-Nia-Atasha.jpg",
     url:      "https://youtube.com/shorts/EKIDSfHVdUc",
   },
 
@@ -393,7 +393,7 @@ const REELS = [
     duration: "",
     ratio:    "",
     text:     "Shot & Lit",
-    thumb:    "Reels-Thumbnail/Sephora-Beauty-Model.png",
+    thumb:    "Reels-Thumbnail/Sephora-Beauty-Model.jpg",
     url:      "https://youtube.com/shorts/-cYbmQFrcSo",
   },
 
@@ -414,7 +414,7 @@ const REELS = [
     duration: "",
     ratio:    "",
     text:     "Shot & Lit",
-    thumb:    "Reels-Thumbnail/2117-Tee-Restocked.png",
+    thumb:    "Reels-Thumbnail/2117-Tee-Restocked.jpg",
     url:      "https://youtube.com/shorts/PNrNW_UbCI0",
   },
 
@@ -425,7 +425,7 @@ const REELS = [
     duration: "",
     ratio:    "",
     text:     "Shot & Lit",
-    thumb:    "Reels-Thumbnail/My-5-9-After-My-9-5.png",
+    thumb:    "Reels-Thumbnail/My-5-9-After-My-9-5.jpg",
     url:      "https://youtube.com/shorts/WRFKL2MlCJY",
   },
 
@@ -435,7 +435,7 @@ const REELS = [
     duration: "",
     ratio:    "",
     text:     "Shot · Lit  · Edit  · Color",
-    thumb:    "Reels-Thumbnail/JaecooxAmanda-Reel.png",
+    thumb:    "Reels-Thumbnail/JaecooxAmanda-Reel.jpg",
     url:      "https://youtube.com/shorts/5lUze0z6c5c",
   },
 
@@ -445,7 +445,7 @@ const REELS = [
     tag:      "",
     duration: "",
     text:     "Shot · Lit  · Edit  · Color",
-    thumb:    "Reels-Thumbnail/Burano-Exposure-Hack.png",
+    thumb:    "Reels-Thumbnail/Burano-Exposure-Hack.jpg",
     url:      "https://youtube.com/shorts/ZugGH-qo-d8",
   },
 
@@ -455,7 +455,7 @@ const REELS = [
     duration: "",
     ratio:    "",
     text:     "Shot · Lit  · Edit  · Color",
-    thumb:    "Reels-Thumbnail/2117-Camera-Spa-Service.png",
+    thumb:    "Reels-Thumbnail/2117-Camera-Spa-Service.jpg",
     url:      "https://youtube.com/shorts/P1k6Xw-UbD8",
   },
 
@@ -465,7 +465,7 @@ const REELS = [
     duration: "",
     ratio:    "",
     text:     "Shot & Lit",
-    thumb:    "Reels-Thumbnail/Commercial-Pro-Package-Prep.png",
+    thumb:    "Reels-Thumbnail/Commercial-Pro-Package-Prep.jpg",
     url:      "https://youtube.com/shorts/JEpXmuOkAZ8",
   },
 
